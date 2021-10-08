@@ -11,9 +11,3 @@ html, body { min-height: 100vh; }
 ol, ul, li { list-style: none; }
 
 /* 动画 */
-* {
-    transition:all 0.3s;
-	-moz-transition:all 0.3s; /* Firefox 4 */
-	-webkit-transition:all 0.3s; /* Safari and Chrome */
-	-o-transition:all 0.3s; /* Opera */
-}

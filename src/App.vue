@@ -1,18 +1,13 @@
 <template>
-	<el-config-provider :locale="locale">
 		<div id="nav">
-			<router-link to="/">{{ $t("nav.home") }}</router-link> |
-			<router-link to="/about">{{ $t("nav.about") }}</router-link> |
-			<router-link to="/example">{{ $t("nav.example") }}</router-link>
+			<router-link to="/">home</router-link> |
+			<router-link to="/about">about</router-link>
 		</div>
 		<router-view />
 		<div hidden>我知道你肯定会修改这里的^.^</div>
-	</el-config-provider>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { i18n } from "./i18n";
 import { version, buildTime } from "../build/info.json"
 
 console.log(`%c Release Build Info 
@@ -22,7 +17,6 @@ BuildTime		${buildTime}`
 , "background:#FFF;color:#000;"
 )
 
-let locale = computed(() => i18n.global.messages![i18n.global.locale]);
 </script>
 
 <style>
